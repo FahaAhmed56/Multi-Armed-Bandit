@@ -1,0 +1,31 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0c0a17; color: #e5e7eb; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; padding: 24px 16px; }
+h1 { text-align: center; font-size: 1.8rem; }
+.sub { text-align: center; color: #9ca3af; font-size: .92rem; margin: 6px auto 20px; max-width: 640px; }
+.card { max-width: 900px; margin: 0 auto 18px; background: #16132a; border: 1px solid #2a2547; border-radius: 16px; padding: 18px; }
+h2 { font-size: 1.05rem; margin-bottom: 12px; }
+h2 small { color: #9ca3af; font-weight: 400; font-size: .82rem; }
+#machines { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+.machine { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 12px 6px; font: inherit; color: inherit; background: #221d3d; border: 2px solid #3b3463; border-radius: 12px; cursor: pointer; transition: transform .1s; }
+.machine:hover:not(:disabled) { border-color: #a78bfa; }
+.machine:active { transform: scale(.97); }
+.machine:disabled { cursor: default; opacity: .8; }
+.machine .emoji { font-size: 1.9rem; }
+.machine span { font-size: .8rem; color: #c4b5fd; }
+.machine .true { color: #9ca3af; }
+.machine.best { border-color: #22c55e; }
+.machine.win { background: #14532d; } .machine.lose { background: #450a0a; }
+#youScore { margin-top: 12px; color: #d1d5db; }
+#youScore b { color: #fbbf24; }
+.btns { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+button { font: inherit; font-size: .88rem; color: #e5e7eb; background: #221d3d; border: 1px solid #3b3463; border-radius: 9px; padding: 8px 12px; cursor: pointer; }
+.primary { background: #8b5cf6; border-color: #8b5cf6; color: #fff; font-weight: 700; }
+.race { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-start; }
+#chart { width: 560px; max-width: 100%; background: #0c0a17; border: 1px solid #2a2547; border-radius: 10px; }
+table { flex: 1; min-width: 260px; border-collapse: collapse; font-size: .84rem; }
+th, td { text-align: left; padding: 7px 5px; border-bottom: 1px solid #2a2547; vertical-align: top; }
+th { color: #9ca3af; font-weight: 500; }
+td + td, th + th { text-align: right; font-variant-numeric: tabular-nums; }
+td i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
+td small { display: block; color: #9ca3af; font-size: .72rem; margin-left: 16px; }
+.info { color: #9ca3af; font-size: .8rem; line-height: 1.45; margin-top: 10px; }

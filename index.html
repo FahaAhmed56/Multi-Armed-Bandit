@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bandit AI – Explore vs Exploit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🎰 Bandit AI: Explore or Exploit?</h1>
+  <p class="sub">5 slot machines, each with a hidden win rate. Find the best one without wasting too many pulls. Try it yourself, then race the AI strategies.</p>
+
+  <section class="card">
+    <h2>1 · You play <small>(<span id="youLeft">50</span> pulls left)</small></h2>
+    <div id="machines"></div>
+    <p id="youScore">Wins: 0</p>
+  </section>
+
+  <section class="card">
+    <h2>2 · AI race <small>(1,000 pulls each, same machines)</small></h2>
+    <div class="btns"><button id="race" class="primary">▶ Run the race</button><button id="newGame">🔀 New machines</button><button id="reveal">👁 Reveal win rates</button></div>
+    <div class="race">
+      <canvas id="chart" width="560" height="260"></canvas>
+      <table id="table"></table>
+    </div>
+    <p class="info"><b>Regret</b> = wins lost compared with always pulling the best machine. Lower is better. A line that flattens out means the strategy has found the best machine and stopped wasting pulls.</p>
+  </section>
+  <script src="bandit.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
